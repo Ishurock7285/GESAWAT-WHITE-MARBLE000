@@ -1,0 +1,640 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#111;
+padding:15px 0;
+}
+
+.container{
+width:90%;
+margin:auto;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#d4af37;
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+/* HERO SECTION */
+.hero{
+height:100vh;
+background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4WHEPt6AQlm8hYUrsRHdXTvGzhpFisdlWrg&s') no-repeat center center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+background:rgba(0,0,0,0.6);
+padding:20px;
+}
+
+.section{
+padding:50px 20px;
+text-align:center;
+}
+
+.btn{
+background:#111;
+color:white;
+padding:10px 15px;
+border:none;
+cursor:pointer;
+margin-top:15px;
+}
+
+.btn:hover{
+background:#d4af37;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+body {
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUPEBAPEBUQEhAPEBAWEBAPEBAQFRUWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx81ODMsNygvMCsBCgoKDQ0NFRAQFSsZFR0rKysrKystKy0rKystNystLSsrLTctKystKy0tKy0tLSsrLS0rKys3Ky03KysrKzc3K//AABEIAJoBRwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADYQAAIBAgUCBAMGBgMBAAAAAAECAAMRBBIhMUEFURNCYYEGMnFSkaHB8PEUIiMzYrFDU9EH/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAEDAv/EABkRAQEBAAMAAAAAAAAAAAAAAAABEQISQf/aAAwDAQACEQMRAD8A+h9W6slRbCfPusLqYpOqkjeLxGJzCaWyxlx448/jEnIrpO7i1nJxCTNo5NVJnKzfVSIKQrE6RDLNzpEOkDKRAIjmWARAUYJjCIVGgzsEQFmY2Cjf1/DW/AgIWmSbAEk7fWXWyj+Vde54v2HpNOIrCmPDpkE7VKg2b/FP8b88/SYYAyS7R+DwrVGyrbYsSTZVUbsx4EAcPQZzYD1J2Cjkk8CNr1BbIm3JtYue/oOwjMRiAB4VK+XzMRZqjdz2HYfnMwWAIWFaFaSANpIVpLQBtIYUq0AbSrQ7SrQBtKhSEQAkhWlQBklyoEkkkgVJJJAkkkkCSSSQJJHUqBbUEADcnQCSB9BpYuPXFTg0680U68I7D1AZgxCwUrRha8K59RIpkm50iHSBgdIh0m90md0gYXWIZZvdImnQZ2CIpZjoAOfy9ztaBmoUGdgiKWZjYAd/rsO9zoI/F4laSmhRIYtpWrjzj7FPtT7nzH0tCxmLWmpo0GDFxlr1h5+9OmeKY5Pm+lhOWBAG0kO0dhMI1RsqgaDMzHREQbsx4AgDgsG1Rsq2GhLMTZEQfMzHgCaMbiVA8GhfILZ3OjV2HmI4Xey8c6y8ZilC+BRv4dwXcizV2HLdlHC8bnWY1WBSrDtCCywIAZZeWHaXaAu0mWMI9pVoAWlERlpVoC5UMiURAAiVaFKtAGUYVpUAZRhSjAGSXKgSVLkMCpJJcCo/C4fPck5VXVmtcDsLck8CMwOEL3JOVFsalQjRR2HdjwBDxde9kUZUT5V3J7sx5Y/tAVXrX/lUZVGw0uf8j3MkURJA7qVJoSpOcjTQjQOjTqTRTqTmo8003gdEG8W6RdOpNAN4GN1md1nQZJq6d0SpWYBFLE7DYfUk7D1OkDh0cG9R1popZnNlUDU8n6aAm/FrzJ1PFrTvh6DBif5a+IU6P3p0z9gHc6ZrdrCdT4h6wlNWweCYOHGXE4oX/rd6VLtS01O7/S1/N06PMikrTkKzSVhYXBtVbKttszsTZEQbux4X9tTKhODwjVWyLYWBZmJsiIN2Y8Lt+EbjMWoU0KN8mmdyLPXYeZhwo4XjfeXjsYoXwKN/DBu7kWeu48zDhRwvH1mOmsKiJGWkAhAQiASwP1rCA/eEF94AWhBYdt5eX9oCgsmX3jbe0hG/HrAURAI9o8r+8Ar7wFEe0oiMI94JEBdoBEbaAwgDBh2gwBgwpRgURBhGVAqSSSBU29PwBqXJIREsalQ6hAdvqx1sObQ+l9NNUkk5Kaa1KpF1QcAfaY8Lufpczfi6oIFNFyU6d8i3ubnd3PLnk+wtJqs2KqggIgKU1uVTknlmPLevGwmNlmlliKplTSWkkyEi/wCj9JIGxWj0eZAYxWgbkaPpvMKNHo0DfTeaqTzm03nY6NhWquqKMxY6D/ZPYcknYQPUfCXw62KfWyqoLO5NlVRuSZyfjz4rpEN0/pv8tEXTEYnZ8URoVQ8Ur32+b6bp+Jviv+m3TsE/9Im2JxKkj+JblEP/AFDa/m7W38pToQM1OhGss0lIWFwTVWyLYWBd3Y5UpovzO58qjv8AQbmBmwuDaq2VLCwLszHKlNBu7nhRz+AJiuqY9cv8Ph7ilcF3Is+IcbM3ZRbRONzqYzq/UkK/w2HuKQIL1LZXxTjZ3G4Qa5U4vrrOSqyYq1WNEEQwJUWB7wwJS/dDAgWohge0i/oxij3gDl9vvhBf3jLb8+8IL/rbmAkL7yFN+fSPC9tNZRXe2kDOV/aAR7TQR+/EWy99YCGHtBI/eNYe8Bh+0BR++CwhmCfugLMGG0AwBMqE0GBUEyzIYAmdf4e6G+JYm+SlSs1esRcU17AeZzsF5PYXI2/BHwfX6lX8GlZEQZq9dgTTop3PcnWwvrae7+JPAw6jB4MZaNK/bNUqEWao58zGw17AAaCB5HqTqAKNFclKn/bS92JO7ufM578XsNBOW6zoVxfWc7FVAIwZK7xVOlcZ2uFBtflm+yv/ALNGHw+YGrUJWmpsftVG+wnr3PAMzYusXOwUDREHyovYf+8wEVal/S2gA2AlwSJIGgGEDFgwgYDkaPR5kBmjC02dgiAlmNlH47/QE39IHQwFB6rrTpqXZjZVFrn3Og+p0FtZ0updSWmjYLCNnDjLisUL2rd6NE7ij3O7/SwnLxGLFNTh6DAlhlxGIW4Ljc0qZ3FO+50LW7Wj+m4YaXkAYXCek0mnwJu8HgTqdP6EzgucqKql3qOcqIg3ZjwJRwsL016rZVsAAXd2IWnSpj5ndjsoG/4XOk5PXerqV/hcNfwFN3cjLUxTjZ2HCDypxubkx/xR19al8LhbrhwQWYjLUxLrs7jhR5U43Ou3nQJMFqIawYQlBiGP0YMNYBAd40CKWNX0gMT8O3pzGJ6aQF/G3tGD1gMUb8HveMC6+ttTfSUOb668fhHU+O1veABXQX117wXXfnXvNA20015MW3Nu/P4wM7D7rbX1tFEbW017x7b+tva8Q3r+hASfTSA35bxr83i2gKaA0MwD6QAMAwzAMATKMswWMATO38L/AA4+MqWv4dJLGviCP5KS8Afac7BRr7AmJ6B0RsSzEsKdKjlbEVjqKam9go81RrEKvJHAuR65+oqqChh18KihJSne7Mx3qVG8znvwNBYACB66r12jhcMuAwK+HSUWZzY1azcvUYbk+n/k8dinzEmZvGJ1JmbFYwAWgJx1YDac6hQD3qVSy0lNrj5qj/Yp357nYTTRw3iA16pKUVbKSPnqvv4dMct3OwG8yY3EGoRoFVRlp0x8lNOw7+p3PMik4zEmoQSAqqMqUx8tNew/M8zMRGEQSJULIlQ7SQBBhgxQMbQps7BVFydAP96nbS+sB1CkzsEQFmOy/rb6nYCbMRiFRTQotmLaVqw8/enT7JpqfN9NIqvXWmDRpEMWGWtWGz/4J/h67t9JmoCFbMHSAnYw78Ccmm07fQ8MajbgBRnqOxypTpr8zueFF/yhHtfg/oiVA1bEOtKjRUvWqsQqqo9TPG//AET43GLP8JhFNHCUm/lGz4lh/wAlT07Lxvvtl+Lvi810GCw5ZcLTNz5WxNQf8jjhR5U43Ou3krQLEKCIUC4SwRCEAwYYP6/1ABhAwGD1jb94lfSMU9oDkP3fj6xlM9u/pEqfv/VoYO1/ygaFO9vy945X1He3pvMwbe/67Q1b7rekDQX0GbvxaBUbe/ta3tFBu3eUTvb8tuYBMfut6RN+3fm0Jjr6xTnvAEne0W0Jj3gMYC29YLQiYBPaAJgGE0WxgUZ0Oi9INcszuKNKkL1q7KWWnfZQPPUPCXubHgEidI6YaxLu3hUaVjXrkXCA7Ko8znYKOTwLkdDHdQDhaVJfCoUr+FS3a53qVD5qjcni9hYSWjXi+oBgtKing0aV/CpXDHMRY1KhGj1SLXPoANBEq0xo8qpXlg018VbaM6X03xg2Irl6eHptlJA/nr1Br4NG/mtu2yg3PAmn4a+HGxWavVL08NSP9SqLBqjf9VK+7dzss2dcxWchVVaaU1FOjSW+SlTGyrffuSdSbkwON1LEmqwOVaaIMlKiv9ujT3yr76k7kkk76c91m6oszusDEywCJqdIhlgKIkhES4GWklyAOdJrqVsi5Ke50qVOW5yr/jt9bTN4lhYc7nm3b6RYMBgMcjTOJqwWGao2VbDlmOioo3ZjwBA29NwzVXyLlGjMzMcqU0HzO54UcmM631lcv8LhrrRBBqORlqYqoNnccILnKnF7nXbJj8eMngUSRTuC7bPXYbFuyjheNzczmSQq5Ygy5QUuDLEA1lwRCgEphiLvDUwGAwxFAwgYD1/CEp7f6iQdYQPfT84D1be0IN98Rf2hX+6A3N3kJ3vpEhveS+/MBhb7rb8xZMotBZu+kCE72gMZGMEmBRMEmS8W7QI7TV0vp/jFmZhTpUrNWqnXICdAB5nNjZeYvAYPxCSzeHTTWpVIuFHAA8zHhRr7Ax+Nx2cLTQZKVO/hpe5JO7uRu55PsNIVo6hjw4FKkvhUaZPh0r3JJGtSoR81Q2FzwBYaCZAYkGUakI0NVnqPgL4NfqDmpUbwcLRP9eudCSNfDp92OlzwJy/hvoPj3r4hmpYdDZmAHiVm5pUr7t3bZeeBPZdQ+IyUXD0gtKjTGWnRTREX8zyTuTrA63xb1SiFTC4RBSoUFyU0GgtyT3J3vzeeGri+s1eLfeC6QObUSZnWdKokzVEgc90iHSbnSIdYGJlkj2WVA5MsSpoweGNRsosNCWY6KqjcseBAPA4RqrZVtoLsxNlRRuzHgR2NxahfAo3CAgsxFmrMPM3Ydl433lYzFAL4NK+Td22asw8zdlHC8fWYDAkkqWIElypIBSCVLEApYlAyQDlgwQZcBgMuLvCBgMBhAxd5AfaA0GXmi7yX/eAzN+rSE78Rd5LwGFoOb3g3g3gETBvKJ9oLvAjtGYLBmpdmbJTSxqVPsg7Ad2PA/wBDWXgcH4l2ZvDpoAalUi4UHYAeZjwvMnUMdnsiL4dNL5Evc3O7ufM55PtAmNxgayIClNCciXudd2Y8sfw2GgmcNE3lgwGlp0+jdND/ANeuWSihsSP7lV/+unfnu2wET03ABh41UlaSmxto1V9/Dp9z3PAmytii5GgVVGWnTX5aa9h/sncmRXUxnVGqEABURBkpUlv4dJBsoHPqTqx1MWjzCjR6PKjejzQjzno80I8B9RJlqJNSPCaneBy6lOZ3pzqvRmd6MDlvTkm16MkDzWHoljYW7knZRySe0fisQAPCpXyXBYn5qjd27DsPziqtYWyroOeCx7n09JngXKkkgSSSSBckkkCQoMuBcIGCDJAIQrwLy4BS7wby7wCvCBgXkvAZeS8XLvAO8maLvLvAPNBzQbymMC3aOweENS7MclNNalQjRewA5Y8CDhMNnJLNkRNaj72HYDljwJeOxmayIMlNL5E5vyzHlj39oF4/G5gtNBkp0/kTck8uxHzMe/3aTFKlgQKnT6bgAR41YlKSm1xo1VvsJ3Pc8CJwWGH9yoSEBtp8ztvlX19eI3FYs1CCbKFGVEHy017D8zzAZi8WajXICqoy06Y0Wmn2R+Z5gI8QDDBgbKbx6NMCNNCPA3I8ejzCjRweBvpPNtEzlUmm+g0DcaF4lsNN2F1nQXB3lxHmamGknoqnTvSSOqbHx+SSSR0kkkkCSSSQJLlSQLkkkgXJeVLgXJJJAK8kEyCAckgkgXeS8CXAK8hMGSBCYyhRzak5VGrN29PU+kQZorH+RB6Mbet94FYnE5gEUZUX5V9ftHuZmlmVAkfRpj5muAPvJ7CIjXO30gNr1yx4AGigbKOwgCBCEAwYYMWISwGgxiNEiEIGxHjA8zJGiBtpPN+HaculN+Hgd3BPPU9JAOk8hgp63om49p3HNevwvw/nW4Gkk9N0D+2JJ1bjGbfX/9k='); /* Yahan apni photo ka sahi naam likhein */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Sirf Contact Page ko middle mein laane ke liye */
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contact box ko bada aur saaf dikhane ke liye */
+.contact-body .section {
+    background: rgba(255, 255, 255, 0.85); /* Transparent white box */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Heading aur Text ko bada karein */
+.contact-body .section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-body .section p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+/* Ye sirf Contact page ke content ko center karega, header ko nahi */
+.contact-only {
+    margin: 0;
+    background-image: url('marble-bg.jpg'); /* Aapki background photo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Sirf contact ke section (dappe) ko beech mein laane ke liye */
+.contact-only .section {
+    background: rgba(255, 255, 255, 0.9); /* Safed transparent box */
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    
+    /* Ise screen ke beech mein laane ke liye */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Text ko bada (Large) karne ke liye */
+.contact-only .section h2 {
+    font-size: 3.5rem; /* Badi heading */
+    margin-bottom: 20px;
+}
+
+.contact-only .section p {
+    font-size: 1.6rem; /* Bade numbers aur naam */
+    margin: 15px 0;
+    color: #000;
+}
+.hero {
+    display: flex;
+    align-items: flex-start; /* Isse content upar chala jayega */
+    justify-content: center;
+    height: 60vh; /* Ya jo bhi aapne height rakhi ho */
+    padding-top: 0px; /* Upar se thoda gap dene ke liye */
+}
+
+.hero h1 {
+    margin-top: 0; 
+    font-size: 3rem; /* Aap apne hisab se adjust kar sakte hain */
+}
+.section {
+    text-align: center; /* Text aur button dono ko center karne ke liye */
+    padding: 50px 80px;
+}
+
+.section button, .section .btn { 
+    /* Agar aapne anchor tag <a> use kiya hai toh yahan .section a likhein */
+    display: inline-block;
+    padding: 30px 50px; /* Isse button bada ho jayega */
+    font-size: 1.2rem;   /* Text thoda bada dikhega */
+    margin-top: 20px;
+    cursor: pointer;
+}
+.product-card {
+    position: relative; /* Ye zaroori hai */
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;         /* Upar se 50% niche */
+    left: 50%;        /* Left se 50% aage */
+    transform: translate(-50%, -50%); /* Perfect centering ke liye */
+    background-color: rgba(0, 0, 0, 0.7); /* Thoda transparent background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Saara content (image, text, button) center kar dega */
+    justify-content: center;
+    padding: 0px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: fit-content; /* Button ko poori width lene se rokega */
+    padding: 12px 24px;
+    font-weight: bold;
+}
+.product-card img {
+    width: 100%;      /* Isse photo card ki poori width tak badi ho jayegi */
+    height: 400px;    /* Aap height apni pasand ke mutabiq set kar sakte hain */
+    object-fit: cover; /* Isse photo khinchegi (stretch) nahi, balki sahi se fit hogi */
+    border-radius: 8px; /* Thode curved corners ke liye (optional) */
+}
+.product-card h3 {
+    font-size: 28px;       /* Size badhane ke liye (aap 32px bhi kar sakte hain) */
+    font-weight: 800;       /* Zyada bold karne ke liye */
+    margin-top: 15px;       /* Photo se thoda niche gap dene ke liye */
+    margin-bottom: 5px;     /* Niche wale text se gap kam karne ke liye */
+    color: #000;            /* Dark black color ke liye */
+    text-transform: uppercase; /* Agar saare letters bade chahiye toh ye add karein */
+}/* "Our Marble Collection" Heading ke liye */
+h2 {
+    font-size: 48px;       /* Isse size bada ho jayega */
+    font-weight: 900;       /* Extra bold karne ke liye */
+    text-align: center;     /* Beech mein laane ke liye */
+    text-transform: uppercase; /* Saare letters bade karne ke liye (Optional) */
+    letter-spacing: 2px;    /* Letters ke beech thoda gap */
+    margin-top: 40px;       /* Upar se thoda gap */
+    margin-bottom: 30px;    /* Niche photo se thoda gap */
+    color: #222;            /* Dark color professional look ke liye */
+    font-family: 'Arial Black', sans-serif; /* Bold font family */
+}/* Card ko relative banayein taaki button iske hisab se move ho */
+.card, .product-card {
+    position: relative;
+    overflow: hidden; /* Photo se bahar na jaye */
+}
+
+/* Button ki styling */
+.order-btn {
+    position: absolute;
+    top: 50%;         /* Upar se bilkul beech mein */
+    left: 50%;        /* Left se bilkul beech mein */
+    transform: translate(-50%, -50%); /* Perfect centering alignment */
+    
+    background-color: #f39c12; /* Sunehra/Orange color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 20;      /* Photo ke upar dikhne ke liye */
+    display: block;   /* Ya hover par dikhane ke liye 'none' karein */
+}
+
+/* Hover Effect (Optional: Jab mouse le jayein tabhi button dikhe) */
+.card .order-btn {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .order-btn {
+    opacity: 1;
+}
+/* Container ko relative rakhein taaki button photo ke andar rahe */
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Button ko center mein lane ki styling */
+.order-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    
+    background-color: #25D366; /* WhatsApp green ya koi bhi bright color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 5;
+}
+
+/* Hover effect taaki sundar lage */
+.order-btn:hover {
+    background-color: #128C7E;
+    transform: translate(-50%, -50%) scale(1.1);
+}/* 1. Photo ke container ko set karein */
+.img-container {
+    position: relative; /* Ye zaroori hai button ko andar rakhne ke liye */
+    width: 100%;
+    display: inline-block;
+}
+
+/* 2. Button ko photo ke center mein layein */
+.order-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+    
+    /* Button ka look */
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    display: block; /* Hamesha dikhne ke liye */
+}
+
+/* 3. Hover karne par thoda effect (optional) */
+.order-btn:hover {
+    background-color: #1
+    %) scale(1.1);
+}
+.hero h1 {
+    font-size: 80px;         /* Size ko 80px ya isse zyada karein aur bada dikhane ke liye */
+    font-weight: 900;       /* Extra bold look ke liye */
+    text-shadow: 3px 2px 10px rgba(0,0,0,0.5); /* Background image par text ko ubhaarne ke liye */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Saare letters bade karne ke liye */
+}.btn {
+    padding: 20px 45px;    /* Pehla number (20px) height badhayega, dusra (40px) width */
+    font-size: 24px;       /* Text ko bada aur saaf dikhane ke liye */
+    font-weight: bold;     /* Text ko thoda mota (bold) karne ke liye */
+    min-width: 250px;      /* Aap fixed width bhi de sakte hain agar button chota lag raha ho */
+    cursor: pointer;
+    background-color: #333; /* Blackish background jo aapke design mein hai */
+    color: white;
+    border: none;
+    transition: 1.9s;      /* Smooth effect ke liye */
+}
+
+/* Hover karne par button thoda aur bada dikhe */
+.btn:hover {
+    transform: scale(1.1); 
+    background-color: #000;
+}
+/* Logo (GWM) ko bada karne ke liye */
+.logo {
+    font-size: 60px;         /* Isse GWM bada ho jayega */
+    font-weight: 900;       /* Zyada bold dikhane ke liye */
+    color: #FFD700;         /* Golden color barkrar rakhne ke liye */
+}
+
+/* Navigation links (Home, Products, etc.) ko bada karne ke liye */
+nav ul li a {
+    font-size: 40px;         /* Links ka size badhane ke liye */
+    font-weight: 1000;       /* Thoda bold look dene ke liye */
+    padding: 10px 15px;     /* Beech mein gap badhane ke liye */
+    text-decoration: none;
+    color: white;
+}
+
+/* Header ka height thoda badhane ke liye (agar zarurat ho) */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50;        /* Header ko thoda upar-niche se jagah dene ke liye */
+}
+hero h1 {
+    font-size: 60px; /* Ise 80 se 60 kar dein */
+    text-align: center;
+}
+/* Puri grid ko set karne ke liye */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ek line mein 3-4 photos */
+    gap: 20px;            /* Photos ke beech ka gap */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;       /* Screen ke beech mein lane ke liye */
+}
+
+/* Har ek marble card ki styling */
+.card {
+    position: relative;   /* Button ko photo ke upar lane ke liye zaroori hai */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;     /* Photo ko card se bahar na nikalne de */
+    text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Photo ki size barabar karne ke liye */
+.card img {
+    width: 100%;
+    height: 200px;        /* Sabhi photos ki height ek jaisi rahegi */
+    object-fit: cover;    /* Photo kategi nahi, barabar fit hogi */
+    display: block;
+}
+
+/* Order Now Button jo photo ke upar dikhega */
+.order-btn {
+    position: absolute;
+    top: 40%;             /* Photo ke beech mein */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.9;         /* Thoda transparent taaki photo dikhe */
+}
+
+.order-btn:hover {
+    background-color: #128C7E; /* Hover karne par dark green */
+    transform: translate(-50%, -50%) scale(1.1); /* Thoda bada hoga */
+}
+
+/* Price aur Name ki styling */
+.card h3 {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.price {
+    color: #f39c12;       /* Golden orange color */
+    font-weight: bold;
+    font-size: 20px;
+}
+/* --- LOGIN PAGE KA CODE (CSS FILE MEIN SABSE NICHE) --- */
+
+/* Resetting for Login Page only using ID */
+#login-page {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+    /* --- Dark Marble Background Sirf Login Page Ke Liye --- */
+    background-image: url('images/dark_marble_bg.jpg'); /* Aapki file ka asli naam likhein */
+    background-size: cover; /* Photo pure screen par fit ho jayegi */
+    background-position: center; /* Photo center mein rahegi */
+    background-repeat: no-repeat; /* Photo repeat nahi hogi */
+    /* ----------------------------------------------------- */
+    
+    transition: background 0.6s ease;
+}
+
+#login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(55, 29, 29, 0.4); /* Andhera karne ke liye halki black layer */
+    z-index: 1; /* Marble ke upar */
+}
+
+/* Isse andhere mein marble thoda sa dikhta rahega */
+#lamp-trigger:checked ~ #login-page::before {
+    background: rgba(0, 0, 0, 0.2); /* Light on karne par layer halki black ho jayegi */
+}
+
+/* Ensure other elements are above the dark layer */
+.main-wrapper, #lamp-trigger {
+    z-index: 2; /* Dark layer se upar */
+}
+
+/* (Rope, Light Beam, aur Login Box ka code pehle jaisa hi rahega) */
+#lamp-trigger { display: none; }
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.lamp-rope {
+    width: 2px; height: 140px; background: #555; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%); cursor: pointer; z-index: 10; transition: height 0.2s ease;
+}
+.lamp-rope::after {
+    content: ''; width: 12px; height: 12px; background: #333; border-radius: 50%;
+    position: absolute; bottom: -6px; left: -5px;
+}
+.light-beam {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 100vh;
+    background: radial-gradient(circle at top, rgba(255, 255, 150, 0.25), transparent 80%);
+    clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
+    opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+}
+.login-box {
+    width: 320px; padding: 40px; background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px; color: white; text-align: center;
+    opacity: 0; transform: translateY(30px); transition: all 0.7s ease; z-index: 5;
+}
+#lamp-trigger:checked ~ .main-wrapper .light-beam { opacity: 1; }
+#lamp-trigger:checked ~ .main-wrapper .login-box { opacity: 1; transform: translateY(0); }
+#lamp-trigger:active ~ .main-wrapper .lamp-rope { height: 160px; }
+.login-box h2 { margin-bottom: 20px; font-weight: 300; }
+.login-box input {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px; color: rgb(21, 21, 21); outline: none;
+}
+.login-btn {
+    width: 100%; padding: 12px; background: #f1c40f; border: none;
+    border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+.grid {
+    display: grid;
+    /* Laptop par 3-4 aur mobile par 1 card apne aap set hoga */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Isse grid center mein aayega */
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Mouse le jaane par card thoda upar uthega */
+}
+.card img {
+    width: 100%;
+    height: 200px; /* Sabhi photos ki height fix ho jayegi */
+    object-fit: cover; /* Photo kategi nahi, box mein fit ho jayegi */
+    display: block;
+}
+.main-title {
+    font-size: 45px;       /* Isse text bada ho jayega */
+    font-weight: 900;       /* Isse text extra bold dikhega */
+    text-transform: uppercase; /* Saare letters bade rahenge */
+    color: #333;           /* Aap apne hisaab se color badal sakte hain */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    margin-top: 0;
+}
+.section {
+    /* ... (Step 1 wala background code) ... */
+    
+    /* Text ko perfectly center karne ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Pure section ki height fix karne ke liye */
+    height: 100vh; /* Puri screen height lega */
+    
+    /* Heading (H2) ko style karne ke liye */
+    h2 {
+        font-size: 50px; /* Text ko bada karega */
+        font-weight: bold; /* Text ko bold karega */
+        margin-bottom: 20px; /* Niche wale text se doori */
+    }
+    
+    /* Paragraph ko style karne ke liye */
+    p {
+        font-size: 20px; /* Paragraph text ko bada karega */
+        max-width: 600px; /* Text line length limit */
+    }
+}
